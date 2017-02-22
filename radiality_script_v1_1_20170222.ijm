@@ -1,4 +1,4 @@
-
+requires("1.48h");
 imHeight=getHeight();
 imWidth=getWidth();
 //rtype = Roi.getType();
