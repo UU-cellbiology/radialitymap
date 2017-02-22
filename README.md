@@ -7,13 +7,13 @@
 
 1. You need to download and install [ImageJ](https://imagej.nih.gov/ij/download.html) or [FIJI](http://fiji.sc/#download) on your computer first.
 2. [Download](http://bigwww.epfl.ch/demo/orientation/OrientationJ_.jar) OrientationJ_.jar and place it in the "plugins" folder of ImageJ/FIJI. 
-3. Load your image to ImageJ/FIJI. Currently macro works only with 8-/16-/32-bit images.
+3. Load your image to ImageJ/FIJI. Currently macro works only with 8-/16-/32-bit images.  
 ![example image](http://katpyxa.info/software/radialitymap/image_example.png "example image")
 4. Choose the origin of coordinates (center with respect to what image considered radial) using "Point" selection tool:
 ![point tool](http://katpyxa.info/software/radialitymap/fiji_point_tool.png "point tool")
 ![example image with dot](http://katpyxa.info/software/radialitymap/image_with_point.png "example image with dot")
 5. Go to *Plugins->Macros->Runs..* menu and choose downloaded script file.
-  * If you try *Plugins->Macros->Install..* and choose script file, it will appear as a separate row in *Plugins->Macros* menu
+  * If you try *Plugins->Macros->Install..* and choose script file, it will appear as a separate row in *Plugins->Macros* menu  
 ![parameters window](http://katpyxa.info/software/radialitymap/parameters_window.png "parameters window") 
 6. Choose values of parameters. For "gaussian window" a good initial guess is an approximate thickness of lines on your image. 
 Try values 2 times higher or less and see result. 
@@ -28,3 +28,25 @@ Macro/script generates five extra images. Here is description:
 ![orientation map](http://katpyxa.info/software/radialitymap/orientation_map.png "orientation map")  
 2. Local radiality map (32-bit) ranging from 0 to 1. It is absolute value of cosine of difference between the local orientation angle and the angle of vector drawn from the new origin of coordinates (marked by Point tool) to the current pixel position  
 ![radiality map](http://katpyxa.info/software/radialitymap/radialitymap.png "radiality map")
+3. Multiplication of original image and radiality map (32-bit), i.e. "radial" intensity component. By default it uses "Fire" color lookup table, but can be anything else.  
+![radiality mult map](http://katpyxa.info/software/radialitymap/radialitymap_mult.png "radiality mult map")
+4. Local non-radiality map (32-bit) ranging from 0 to 1. It is just one minus radiality map  
+![nonradiality map](http://katpyxa.info/software/radialitymap/nonradialitymap.png "nonradiality map")
+5. Multiplication of original image and non-radiality map (32-bit), i.e. "non-radial" intensity component. By default it uses "Fire" color lookup table, but can be anything else.  
+![nonradiality mult map](http://katpyxa.info/software/radialitymap/nonradialitymap_mult.png "nonradiality mult map")
+
+In general, you can combine radial/non-radial images (3 and 5) together with different LUTs using *Image->Color->Merge Channels..* command of ImageJ (cyan=radial, magenta=non-radial):  
+![composite map](http://katpyxa.info/software/radialitymap/composite_maps.png "composite map")
+
+
+## Example application to microtubules shapes
+
+Here is image of a cytoplast at round micropattern kindly provided by [Manuel Thery](http://www.cytomorpholab.com/index.php?page=lab-members) (gray) and separation result (cyan=radial, magenta=non-radial):  
+![cytoplast](http://katpyxa.info/software/radialitymap/cytoplasts_decomposed.png "cytoplast")  
+
+It is easy to see some artefact at the center. The density of microtubules is high there, they overlap over each other and so it is impossible to distinguish individual filaments shapes. But line features can be enchanced using [Hessian FeatureJ](https://imagescience.org/meijering/software/featurej/hessian/) function (smallest eighen value, no absolute comparison), so shapes can be distinguished a bit better:  
+![cytoplast hessian](http://katpyxa.info/software/radialitymap/cytoplasts_decomposed_hessian.png "cytoplast after hessian")
+
+
+---
+Developed in [Cell Biology group](http://cellbiology.science.uu.nl/) of Utrecht University.  
