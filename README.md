@@ -50,3 +50,5 @@ It is easy to see some artefact at the center. The density of microtubules is hi
 
 ---
 Developed in [Cell Biology group](http://cellbiology.science.uu.nl/) of Utrecht University.  
+Email katpyxa @ gmail.com for any questions/comments/suggestions.
+
