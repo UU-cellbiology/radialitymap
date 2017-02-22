@@ -6,8 +6,9 @@
 ## How to install and run macro
 
 1. You need to download and install [ImageJ](https://imagej.nih.gov/ij/download.html) or [FIJI](http://fiji.sc/#download) on your computer first.
+  * you will need ImageJ version 1.48h or higher for macro to work.
 2. [Download](http://bigwww.epfl.ch/demo/orientation/OrientationJ_.jar) OrientationJ_.jar and place it in the "plugins" folder of ImageJ/FIJI. 
-3. [Download](https://raw.githubusercontent.com/ekatrukha/radialitymap/master/radiality_script_v1_1_20170222.ijm) macro file "*radiality_script...ijm*" and store it somewhere on your hard dist.
+3. [Download](https://raw.githubusercontent.com/ekatrukha/radialitymap/master/radiality_script_v1_1_20170222.ijm) macro file "*radiality_script...ijm*" and store it somewhere on your hard disk.
 4. Load your image to ImageJ/FIJI. Currently macro works only with 8-/16-/32-bit images.  
 ![example image](http://katpyxa.info/software/radialitymap/image_example.png "example image")
 5. Choose the origin of coordinates (center with respect to what image considered radial) using "Point" selection tool:
