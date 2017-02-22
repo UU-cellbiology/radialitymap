@@ -7,18 +7,19 @@
 
 1. You need to download and install [ImageJ](https://imagej.nih.gov/ij/download.html) or [FIJI](http://fiji.sc/#download) on your computer first.
 2. [Download](http://bigwww.epfl.ch/demo/orientation/OrientationJ_.jar) OrientationJ_.jar and place it in the "plugins" folder of ImageJ/FIJI. 
-3. Load your image to ImageJ/FIJI. Currently macro works only with 8-/16-/32-bit images.  
+3. [Download](https://raw.githubusercontent.com/ekatrukha/radialitymap/master/radiality_script_v1_1_20170222.ijm) macro file "*radiality_script...ijm*" and store it somewhere on your hard dist.
+4. Load your image to ImageJ/FIJI. Currently macro works only with 8-/16-/32-bit images.  
 ![example image](http://katpyxa.info/software/radialitymap/image_example.png "example image")
-4. Choose the origin of coordinates (center with respect to what image considered radial) using "Point" selection tool:
+5. Choose the origin of coordinates (center with respect to what image considered radial) using "Point" selection tool:
 ![point tool](http://katpyxa.info/software/radialitymap/fiji_point_tool.png "point tool")
 ![example image with dot](http://katpyxa.info/software/radialitymap/image_with_point.png "example image with dot")
-5. Go to *Plugins->Macros->Runs..* menu and choose downloaded script file.
-  * If you try *Plugins->Macros->Install..* and choose script file, it will appear as a separate row in *Plugins->Macros* menu  
+6. Go to *Plugins->Macros->Runs..* menu and choose previously downloaded macro file ("*radiality_script...ijm*" from step 3).
+  * If you try *Plugins->Macros->Install..* and choose macro file, it will appear as a separate row in *Plugins->Macros* menu  
 ![parameters window](http://katpyxa.info/software/radialitymap/parameters_window.png "parameters window") 
-6. Choose values of parameters. For "gaussian window" a good initial guess is an approximate thickness of lines on your image. 
+7. Choose values of parameters. For "gaussian window" a good initial guess is an approximate thickness of lines on your image. 
 Try values 2 times higher or less and see result. 
 The difference in "Map calculation method" is not so critical, pick the best one judging from final result.
-7. Done!
+8. Done!
 
 ## Output images
 
