@@ -8,7 +8,7 @@
 1. You need to download and install [ImageJ](https://imagej.nih.gov/ij/download.html) or [FIJI](http://fiji.sc/#download) on your computer first.
   * you will need ImageJ version 1.48h or higher for macro to work.
 2. [Download](http://bigwww.epfl.ch/demo/orientation/OrientationJ_.jar) OrientationJ_.jar and place it in the "plugins" folder of ImageJ/FIJI. 
-3. [Download](https://raw.githubusercontent.com/ekatrukha/radialitymap/master/radiality_script_v1_1_20170222.ijm) macro file "*radiality_script...ijm*" and store it somewhere on your hard disk.
+3. [Download](https://raw.githubusercontent.com/ekatrukha/radialitymap/master/radiality_script_v2_0_20191017.ijm) macro file "*radiality_script...ijm*" and store it somewhere on your hard disk.
 4. Load your image to ImageJ/FIJI. Currently macro works only with 8-/16-/32-bit images.
   * regular RGB images can be converted in ImageJ using *Image->Type->...bit* command  
 ![example image](http://katpyxa.info/software/radialitymap/image_example.png "example image")  
@@ -50,6 +50,9 @@ Here is image of a cytoplast at round micropattern kindly provided by [Manuel Th
 It is easy to see some artefact at the center. The density of microtubules is high there, they overlap over each other and so it is impossible to distinguish individual filaments shapes. But line features can be enchanced using [Hessian FeatureJ](https://imagescience.org/meijering/software/featurej/hessian/) function (smallest eighen value, no absolute comparison), so shapes can be distinguished a bit better:  
 ![cytoplast hessian](http://katpyxa.info/software/radialitymap/cytoplasts_decomposed_hessian.png "cytoplast after hessian")
 
+## Updates history
+
+2019.10.17 Thanks to Junnan Fang feedback macro is updated to the current version of OrientationJ
 
 ---
 Developed in [Cell Biology group](http://cellbiology.science.uu.nl/) of Utrecht University.  
