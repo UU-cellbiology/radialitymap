@@ -1,5 +1,7 @@
-# Radiality map
+# Radiality map 
 
+
+[![DOI](https://zenodo.org/badge/82709541.svg)](https://zenodo.org/badge/latestdoi/82709541) <br/>
 [ImageJ](https://imagej.nih.gov/ij/)/[FIJI](http://fiji.sc/) macro that splits image to radial and non-radial components using output of [OrientationJ](http://bigwww.epfl.ch/demo/orientation/) plugin.
 ![radialitymap logo](http://katpyxa.info/software/radialitymap_logo.png "logo")
 
@@ -49,6 +51,12 @@ Here is image of a cytoplast at round micropattern kindly provided by [Manuel Th
 
 It is easy to see some artefact at the center. The density of microtubules is high there, they overlap over each other and so it is impossible to distinguish individual filaments shapes. But line features can be enchanced using [Hessian FeatureJ](https://imagescience.org/meijering/software/featurej/hessian/) function (smallest eighen value, no absolute comparison), so shapes can be distinguished a bit better:  
 ![cytoplast hessian](http://katpyxa.info/software/radialitymap/cytoplasts_decomposed_hessian.png "cytoplast after hessian")
+
+## How to cite this macro?
+
+You can use Zenodo DOI for the link to the specific release (see DOI badge on the top of the page):
+
+> _Katrukha E. 2019, RadialityMap macro for ImageJ, v0.2, Zenodo, doi:10.5281/zenodo.6817259_
 
 ## Updates history
 
